@@ -6,7 +6,7 @@ This actions sets up a Tau Prolog environment for use in workflows.
 
 ## Usage
 
-See [action.yml](action.yml) for the action metadata.
+See [action.yml](action.yml) for the action metadata. The required `tau-prolog-version` input parameter specifies the version to be installed (`latest` or version number, e.g. `0.2.76`; default is `latest`).
 
 ## Example
 
