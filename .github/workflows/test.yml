@@ -1,0 +1,25 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [macOS-latest, ubuntu-latest]
+    steps:
+      - name: Install Tau Prolog
+        uses: logtalk-actions/setup-tau-prolog@master
+        with:
+          tau-prolog-version: latest
+      - name: Run trivial sanity test
+        run: |
+          echo 'var pl = require( "tau-prolog" ); // core' > query.js
+          echo 'require( "tau-prolog/modules/lists.js" )( pl ); // modules' >> query.js
+          echo 'var query = process.argv[2] || "true.";' >> query.js
+          echo 'var max_answers = process.argv[3] || 100;' >> query.js
+          echo 'var session = pl.create();' >> query.js
+          echo 'session.query(query);' >> query.js
+          echo 'session.answers(x => console.log(pl.format_answer(x)), max_answers);' >> query.js
+          node query "true."

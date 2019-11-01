@@ -1,0 +1,13 @@
+name: Setup Tau Prolog
+description: Installs the specified Tau Prolog
+inputs:
+  tau-prolog-version:
+    description: Tau Prolog version to install
+    required: true
+    default: latest
+runs:
+  using: 'node12'
+  main: 'src/setup-tau-prolog.js'
+branding:
+  icon: 'box'
+  color: 'blue'

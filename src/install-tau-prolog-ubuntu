@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eo pipefail
+
+version=$1
+
+npm init -y
+if [ "$version" == "latest" ] ; then
+	npm install tau-prolog
+else 
+	npm install tau-prolog@$version
+fi
