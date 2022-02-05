@@ -1,25 +1,25 @@
 {
-  "name": "setup-tau-prolog",
+  "name": "setup-ciao-prolog",
   "version": "1.0.0",
-  "description": "This actions sets up a Tau Prolog environment for use in workflows.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/logtalk-actions/setup-tau-prolog.git"
+    "url": "git+https://github.com/logtalk-actions/setup-ciao-prolog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/logtalk-actions/setup-tau-prolog/issues"
+    "url": "https://github.com/logtalk-actions/setup-ciao-prolog/issues"
   },
-  "homepage": "https://github.com/logtalk-actions/setup-tau-prolog#readme",
+  "homepage": "https://github.com/logtalk-actions/setup-ciao-prolog#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/exec": "^1.1.0",
-    "@actions/github": "^1.1.0"
+    "@actions/github": "^5.0.0"
   }
 }
